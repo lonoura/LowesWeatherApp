@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/cityLookupFragment">
+
+    <fragment
+        android:id="@+id/cityLookupFragment"
+        android:name="com.example.lowesweatherapp.view.CityLookupFragment"
+        tools:layout="@layout/fragment_city_lookup">
+        <action
+            android:id="@+id/action_cityLookupFragment_to_mainWeatherFragment"
+            app:destination="@id/mainWeatherFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/mainWeatherFragment"
+        android:name="com.example.lowesweatherapp.view.MainWeatherFragment"
+        tools:layout="@layout/fragment_main_weather">
+        <action
+            android:id="@+id/action_weatherFragment_to_detailsFragment"
+            app:destination="@id/weatherDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/weatherDetailsFragment"
+        android:name="com.example.lowesweatherapp.view.WeatherDetailsFragment" />
+</navigation>
